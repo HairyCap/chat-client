@@ -6,7 +6,7 @@ import ApolloCliten from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 
 const client = new ApolloCliten({
-  uri: "http://localhost:4000/graphql"
+  uri: "https://chat-chat-server.herokuapp.com/graphql"
 });
 
 class App extends Component {
