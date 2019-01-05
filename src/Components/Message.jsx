@@ -22,7 +22,7 @@ function YourMsg(props) {
 
 class Message extends Component {
   componentDidUpdate() {
-    this.props.scroll();
+    setTimeout(this.props.scroll, 200);
   }
 
   render() {
