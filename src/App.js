@@ -6,7 +6,7 @@ import ApolloCliten from "apollo-boost";
 import { ApolloProvider } from "react-apollo";
 
 const client = new ApolloCliten({
-  uri: "https://chat-chat-server.herokuapp.com/graphql"
+  uri: "http://localhost:4000/graphql"
 });
 
 class App extends Component {
@@ -33,7 +33,7 @@ class App extends Component {
       <ApolloProvider client={client}>
         <div className="App">
           <div className="chatContent">
-            <Message me={this.state.me} />
+            <Message me={this.state.me} scroll={this.scrollToBottom} />
             <div id="refDiv" className="refDiv" ref={this.chat} />
           </div>
           <InputForm me={this.state.me} scroll={this.scrollToBottom} />

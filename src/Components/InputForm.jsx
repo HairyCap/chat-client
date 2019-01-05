@@ -36,8 +36,7 @@ class InputForm extends Component {
           },
           refetchQueries: [{ query: getMsgsQuery }]
         })
-        .then(res => console.log(res))
-        .then(this.props.scroll());
+        .then(res => console.log(res));
       this.update("");
     }
   };

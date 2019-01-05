@@ -21,6 +21,10 @@ function YourMsg(props) {
 }
 
 class Message extends Component {
+  componentDidUpdate() {
+    this.props.scroll();
+  }
+
   render() {
     console.log(this.props);
     const data = this.props.data;
