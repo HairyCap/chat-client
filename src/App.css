@@ -1,0 +1,97 @@
+@media screen and (min-width: 500px) {
+  .App {
+    font-size: 1.1em;
+    margin: 1em 5em;
+    border: 1px solid #f3d6e2;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 80vh;
+  }
+}
+.App {
+  font-size: 1em;
+  margin: 0em;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 98vh;
+}
+
+.chatContent {
+  flex: 1 1 95%;
+  display: flex;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  flex-direction: column;
+}
+
+.msg2 {
+  display: flex;
+}
+
+.text-you {
+  flex: 1 1 auto;
+  max-width: 80%;
+  background-color: #da727e;
+}
+
+.text-me {
+  flex: 1 1 auto;
+  max-width: 80%;
+  background-color: #ffaa5c;
+}
+
+.placeHolder {
+  flex: 20 6 auto;
+}
+
+p.text-you {
+  border-radius: 2px 15px 15px 15px;
+}
+
+p.text-me {
+  border-radius: 15px 2px 15px 15px;
+}
+
+p {
+  word-wrap: break-word;
+  border: 1px solid #f3d6e2;
+  padding: 5px 5px 5px 10px;
+  margin: 5px;
+}
+
+.msg {
+  display: flex;
+  flex: 1 1 40px;
+  min-height: 40px;
+}
+input {
+  width: 85%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  font-size: 1em;
+  background-color: #f3d6e2;
+  margin: 3px 2px 3px 3px;
+  border-radius: 9px;
+  font-family: inherit;
+}
+button {
+  width: 15%;
+  margin: 3px 3px 3px 0px;
+  outline: none;
+  border: none;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 1em;
+  background-color: #faeaf0;
+}
+button:active {
+  background-color: #f8d4e1;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
