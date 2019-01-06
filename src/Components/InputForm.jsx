@@ -13,14 +13,14 @@ class InputForm extends Component {
   }
 
   componentDidUpdate() {
-    this.focusInput();
+    setTimeout(this.props.scroll, 200);
   }
   focusInput = () => {
     this.inputRef.current.focus();
   };
-  update = value => {
+  update = e => {
     const state = { ...this.state };
-    state.content = value;
+    state.content = e.target.value;
     this.setState(state);
     console.log(this.props);
   };
@@ -37,7 +37,7 @@ class InputForm extends Component {
           refetchQueries: [{ query: getMsgsQuery }]
         })
         .then(res => console.log(res));
-      this.update("");
+        this.setState({content:""});
     }
   };
 
@@ -46,7 +46,7 @@ class InputForm extends Component {
       <form className="msg">
         <input
           type="text"
-          onChange={e => this.update(e.target.value)}
+          onChange={this.update}
           //手机键盘跳出，视图大小调整后滚动,在移动端FireFox测试200毫秒延迟成功率较高（Mi6）
           onFocus={() => setTimeout(this.props.scroll, 200)}
           //手机键盘点击输入框，滚动到底部
